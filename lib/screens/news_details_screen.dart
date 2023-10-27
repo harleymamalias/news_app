@@ -12,7 +12,11 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Row(children: [Text('News Details Screen')]),
+        body: Row(
+          children: [
+            Text('News Details Screen'),
+          ],
+        ),
       ),
     );
   }
