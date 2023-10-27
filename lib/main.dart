@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:news_app/screens/home_screen.dart';
 import 'package:news_app/widgets/custom_navigation_bar.dart';
 
@@ -27,10 +26,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'News App',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Color(0xFFFCFCFC),
+        backgroundColor: const Color(0xFFFCFCFC),
         body: const NewsAppHomeScreen(),
         bottomNavigationBar: CustomBottomNavigationBar(
           selectedIndex: selectedIndex,

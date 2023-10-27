@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/size-configuration.dart';
 
 List<String> tagNames = ['#Health', '#Music', '#Technology', '#Sports'];
@@ -21,12 +22,14 @@ class TagsSection extends StatelessWidget {
             padding: const EdgeInsets.only(right: 39),
             child: Text(
               tagNames[index],
-              style: TextStyle(
+              style: GoogleFonts.roboto(
+                textStyle: TextStyle(
                   color: const Color(0xFF9397A0),
                   fontSize: SizeConfiguration.blockSizeHorizontal! * 3,
-                  fontFamily: 'Gellix',
                   fontWeight: FontWeight.w500,
-                  height: 0),
+                  height: 0,
+                ),
+              ),
             ),
           );
         },

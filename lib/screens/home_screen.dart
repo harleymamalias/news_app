@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/size-configuration.dart';
 import 'package:news_app/widgets/news_section.dart';
 import 'package:news_app/widgets/search_box.dart';
@@ -57,21 +58,25 @@ class _NewsAppHomeScreenState extends State<NewsAppHomeScreen> {
             children: [
               Text(
                 'Short For You',
-                style: TextStyle(
+                style: GoogleFonts.roboto(
+                  textStyle: TextStyle(
                     color: const Color(0xFF19202D),
                     fontSize: SizeConfiguration.blockSizeHorizontal! * 4.5,
-                    fontFamily: 'Gellix',
                     fontWeight: FontWeight.w700,
-                    height: 0),
+                    height: 0,
+                  ),
+                ),
               ),
               Text(
                 'View All',
-                style: TextStyle(
+                style: GoogleFonts.roboto(
+                  textStyle: TextStyle(
                     color: const Color(0xFF5474FD),
                     fontSize: SizeConfiguration.blockSizeHorizontal! * 3,
-                    fontFamily: 'Gellix',
                     fontWeight: FontWeight.w500,
-                    height: 0),
+                    height: 0,
+                  ),
+                ),
               ),
             ],
           ),

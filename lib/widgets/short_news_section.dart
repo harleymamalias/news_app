@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/size-configuration.dart';
 
 class ShortNewsSection extends StatelessWidget {
@@ -21,14 +22,17 @@ class ShortNewsSection extends StatelessWidget {
             width: 208,
             height: 88,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                boxShadow: [
-                  BoxShadow(
-                      color: const Color(0xff19202d).withOpacity(0.050),
-                      offset: const Offset(0, 3),
-                      blurRadius: 24,
-                      spreadRadius: 0),
-                ]),
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xff19202d).withOpacity(0.010),
+                  offset: const Offset(0, 3),
+                  blurRadius: 24,
+                  spreadRadius: 0,
+                ),
+              ],
+            ),
             child: Row(
               children: [
                 Container(
@@ -36,10 +40,12 @@ class ShortNewsSection extends StatelessWidget {
                   height: 70,
                   padding: const EdgeInsets.all(26),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      image: const DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/island.jpg'))),
+                    borderRadius: BorderRadius.circular(16),
+                    image: const DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage('assets/island.jpg'),
+                    ),
+                  ),
                   child: SvgPicture.asset('assets/play_icon.svg'),
                 ),
                 const SizedBox(
@@ -53,12 +59,14 @@ class ShortNewsSection extends StatelessWidget {
                       'Top Trending Islands in 2023',
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: const Color(0xFF19202D),
-                        fontSize: SizeConfiguration.blockSizeHorizontal! * 3.5,
-                        fontFamily: 'Gellix',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
+                      style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                          color: const Color(0xFF19202D),
+                          fontSize:
+                              SizeConfiguration.blockSizeHorizontal! * 2.5,
+                          fontWeight: FontWeight.w600,
+                          height: 0,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -72,13 +80,14 @@ class ShortNewsSection extends StatelessWidget {
                         ),
                         Text(
                           '40,999',
-                          style: TextStyle(
-                            color: const Color(0xFF9397A0),
-                            fontFamily: 'Gellix',
-                            fontWeight: FontWeight.w500,
-                            height: 0,
-                            fontSize:
-                                SizeConfiguration.blockSizeHorizontal! * 3,
+                          style: GoogleFonts.roboto(
+                            textStyle: TextStyle(
+                              color: const Color(0xFF9397A0),
+                              fontWeight: FontWeight.w500,
+                              height: 0,
+                              fontSize:
+                                  SizeConfiguration.blockSizeHorizontal! * 2.5,
+                            ),
                           ),
                         )
                       ],

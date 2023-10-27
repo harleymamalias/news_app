@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/models/news_details_data.dart';
 import 'package:news_app/screens/author_details_screen.dart';
 import 'package:news_app/screens/news_details_screen.dart';
@@ -26,15 +27,17 @@ class NewsSection extends StatelessWidget {
             height: 304,
             width: 255,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                      color: const Color(0xff19202d).withOpacity(0.050),
-                      offset: const Offset(0, 3),
-                      blurRadius: 24,
-                      spreadRadius: 0),
-                ]),
+              borderRadius: BorderRadius.circular(16),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xff19202d).withOpacity(0.050),
+                  offset: const Offset(0, 3),
+                  blurRadius: 24,
+                  spreadRadius: 0,
+                ),
+              ],
+            ),
             child: Column(
               children: [
                 GestureDetector(
@@ -51,10 +54,12 @@ class NewsSection extends StatelessWidget {
                   child: Container(
                     height: 164,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(item.mainCoverPhoto))),
+                      borderRadius: BorderRadius.circular(16),
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(item.mainCoverPhoto),
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -63,12 +68,13 @@ class NewsSection extends StatelessWidget {
                 Flexible(
                   child: Text(
                     item.headlineTitle,
-                    style: TextStyle(
-                      color: const Color(0xFF19202D),
-                      fontSize: SizeConfiguration.blockSizeHorizontal! * 3.5,
-                      fontFamily: 'Gellix',
-                      fontWeight: FontWeight.w600,
-                      height: 0,
+                    style: GoogleFonts.roboto(
+                      textStyle: TextStyle(
+                        color: const Color(0xFF19202D),
+                        fontSize: SizeConfiguration.blockSizeHorizontal! * 3,
+                        fontWeight: FontWeight.w600,
+                        height: 0,
+                      ),
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
@@ -107,14 +113,15 @@ class NewsSection extends StatelessWidget {
                             children: [
                               Text(
                                 item.authorName,
-                                style: TextStyle(
-                                  color: const Color(0xFF19202D),
-                                  fontSize:
-                                      SizeConfiguration.blockSizeHorizontal! *
-                                          3,
-                                  fontFamily: 'Gellix',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0,
+                                style: GoogleFonts.roboto(
+                                  textStyle: TextStyle(
+                                    color: const Color(0xFF19202D),
+                                    fontSize:
+                                        SizeConfiguration.blockSizeHorizontal! *
+                                            2.5,
+                                    fontWeight: FontWeight.w600,
+                                    height: 0,
+                                  ),
                                 ),
                               ),
                               const SizedBox(
@@ -122,14 +129,15 @@ class NewsSection extends StatelessWidget {
                               ),
                               Text(
                                 'September 9, 2022',
-                                style: TextStyle(
-                                  color: const Color(0xFF9397A0),
-                                  fontSize:
-                                      SizeConfiguration.blockSizeHorizontal! *
-                                          3,
-                                  fontFamily: 'Gellix',
-                                  fontWeight: FontWeight.w600,
-                                  height: 0,
+                                style: GoogleFonts.roboto(
+                                  textStyle: TextStyle(
+                                    color: const Color(0xFF9397A0),
+                                    fontSize:
+                                        SizeConfiguration.blockSizeHorizontal! *
+                                            2.5,
+                                    fontWeight: FontWeight.w600,
+                                    height: 0,
+                                  ),
                                 ),
                               )
                             ],
