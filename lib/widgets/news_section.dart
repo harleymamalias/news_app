@@ -45,9 +45,7 @@ class NewsSection extends StatelessWidget {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => NewsDetailsScreen(
-                            // image: item.mainCoverPhoto,
-                            // title: item.headlineTitle,
-                            ),
+                            newsDetailsData: newsDataList[index], index: index),
                       ),
                     );
                   },
