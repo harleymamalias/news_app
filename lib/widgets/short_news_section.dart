@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app/models/shorts_news_details_data.dart';
 import 'package:news_app/size-configuration.dart';
 
 class ShortNewsSection extends StatelessWidget {
@@ -13,9 +14,10 @@ class ShortNewsSection extends StatelessWidget {
     return SizedBox(
       height: 88,
       child: ListView.builder(
-        itemCount: 10,
+        itemCount: shortsDataList.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
+          ShortNewsDetails item = shortsDataList[index];
           return Container(
             padding: const EdgeInsets.all(9),
             margin: const EdgeInsets.only(right: 20),
@@ -26,7 +28,7 @@ class ShortNewsSection extends StatelessWidget {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff19202d).withOpacity(0.010),
+                  color: const Color(0xff19202d).withOpacity(0.030),
                   offset: const Offset(0, 3),
                   blurRadius: 24,
                   spreadRadius: 0,
@@ -41,9 +43,9 @@ class ShortNewsSection extends StatelessWidget {
                   padding: const EdgeInsets.all(26),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    image: const DecorationImage(
+                    image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage('assets/island.jpg'),
+                      image: AssetImage(item.coverPhoto),
                     ),
                   ),
                   child: SvgPicture.asset('assets/play_icon.svg'),
@@ -56,14 +58,14 @@ class ShortNewsSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Top Trending Islands in 2023',
+                      item.description,
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                           color: const Color(0xFF19202D),
                           fontSize:
-                              SizeConfiguration.blockSizeHorizontal! * 2.5,
+                              SizeConfiguration.blockSizeHorizontal! * 3.5,
                           fontWeight: FontWeight.w600,
                           height: 0,
                         ),
@@ -79,14 +81,14 @@ class ShortNewsSection extends StatelessWidget {
                           width: 4,
                         ),
                         Text(
-                          '40,999',
+                          item.numberOfViews,
                           style: GoogleFonts.roboto(
                             textStyle: TextStyle(
                               color: const Color(0xFF9397A0),
                               fontWeight: FontWeight.w500,
                               height: 0,
                               fontSize:
-                                  SizeConfiguration.blockSizeHorizontal! * 2.5,
+                                  SizeConfiguration.blockSizeHorizontal! * 3.5,
                             ),
                           ),
                         )

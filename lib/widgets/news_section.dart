@@ -17,7 +17,7 @@ class NewsSection extends StatelessWidget {
       height: 304,
       child: ListView.builder(
         shrinkWrap: true,
-        itemCount: 4,
+        itemCount: newsDataList.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           NewsDetailsData item = newsDataList[index];
@@ -31,7 +31,7 @@ class NewsSection extends StatelessWidget {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xff19202d).withOpacity(0.050),
+                  color: const Color(0xff19202d).withOpacity(0.030),
                   offset: const Offset(0, 3),
                   blurRadius: 24,
                   spreadRadius: 0,
@@ -71,7 +71,7 @@ class NewsSection extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                         color: const Color(0xFF19202D),
-                        fontSize: SizeConfiguration.blockSizeHorizontal! * 3,
+                        fontSize: SizeConfiguration.blockSizeHorizontal! * 3.8,
                         fontWeight: FontWeight.w600,
                         height: 0,
                       ),
@@ -87,10 +87,7 @@ class NewsSection extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => AuthorDetailsScreen(
-                            // image: item.mainCoverPhoto,
-                            // title: item.headlineTitle,
-                            ),
+                        builder: (context) => const AuthorDetailsScreen(),
                       ),
                     );
                   },
@@ -102,7 +99,7 @@ class NewsSection extends StatelessWidget {
                           CircleAvatar(
                             radius: 19,
                             backgroundColor: Colors.lightBlueAccent,
-                            backgroundImage: AssetImage(item.authorPicture),
+                            backgroundImage: AssetImage(item.authorProfile),
                           ),
                           const SizedBox(
                             width: 12,
@@ -112,13 +109,13 @@ class NewsSection extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                item.authorName,
+                                '${item.authorFirstName} ${item.authorLastName}',
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     color: const Color(0xFF19202D),
                                     fontSize:
                                         SizeConfiguration.blockSizeHorizontal! *
-                                            2.5,
+                                            3.3,
                                     fontWeight: FontWeight.w600,
                                     height: 0,
                                   ),
@@ -128,13 +125,13 @@ class NewsSection extends StatelessWidget {
                                 height: 5,
                               ),
                               Text(
-                                'September 9, 2022',
+                                item.datePublished,
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     color: const Color(0xFF9397A0),
                                     fontSize:
                                         SizeConfiguration.blockSizeHorizontal! *
-                                            2.5,
+                                            3.3,
                                     fontWeight: FontWeight.w600,
                                     height: 0,
                                   ),
