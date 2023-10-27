@@ -33,11 +33,14 @@ class ShortNewsSection extends StatelessWidget {
               children: [
                 Container(
                   width: 70,
+                  height: 70,
+                  padding: const EdgeInsets.all(26),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
                       image: const DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage('assets/island.jpg'))),
+                  child: SvgPicture.asset('assets/play_icon.svg'),
                 ),
                 const SizedBox(
                   width: 12,

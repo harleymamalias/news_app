@@ -79,11 +79,11 @@ class _NewsAppHomeScreenState extends State<NewsAppHomeScreen> {
             height: 19,
           ),
           const ShortNewsSection(),
-          const SizedBox(height: 24,),
-          
+          const SizedBox(
+            height: 24,
+          ),
         ],
       ),
     );
   }
 }
-
