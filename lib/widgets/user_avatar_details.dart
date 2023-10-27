@@ -25,7 +25,7 @@ class UserAvatarDetails extends StatelessWidget {
           height: 7,
         ),
         Text(
-          'Monday, 3 October',
+          'Friday, 27 October',
           style: TextStyle(
             color: const Color(0xFF9397A0),
             fontSize: SizeConfiguration.blockSizeHorizontal! * 3,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/size-configuration.dart';
-import 'package:news_app/widgets/news-section.dart';
-import 'package:news_app/widgets/search-box.dart';
-import 'package:news_app/widgets/short-news-section.dart';
-import 'package:news_app/widgets/tags-section.dart';
-import 'package:news_app/widgets/user-avatar-details.dart';
-import 'package:news_app/widgets/user-avatar.dart';
+import 'package:news_app/widgets/news_section.dart';
+import 'package:news_app/widgets/search_box.dart';
+import 'package:news_app/widgets/short_news_section.dart';
+import 'package:news_app/widgets/tags_section.dart';
+import 'package:news_app/widgets/user_avatar_details.dart';
+import 'package:news_app/widgets/user_avatar.dart';
 
 class NewsAppHomeScreen extends StatefulWidget {
   const NewsAppHomeScreen({super.key});
