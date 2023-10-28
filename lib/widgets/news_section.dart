@@ -73,7 +73,7 @@ class NewsSection extends StatelessWidget {
                       textStyle: TextStyle(
                         color: const Color(0xFF19202D),
                         fontSize: SizeConfiguration.blockSizeHorizontal! * 3.8,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w800,
                         height: 0,
                       ),
                     ),

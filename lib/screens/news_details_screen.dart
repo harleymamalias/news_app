@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/models/news_details_data.dart';
 import 'package:news_app/size-configuration.dart';
+import 'package:news_app/widgets/custom_navigation_bar.dart';
 import 'package:news_app/widgets/full_screen_slider.dart';
 
 class NewsDetailsScreen extends StatefulWidget {
@@ -19,6 +20,15 @@ class NewsDetailsScreen extends StatefulWidget {
 }
 
 class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
+  int selectedIndex = 0;
+
+  void onItemTapped(int index) {
+    // print('Tapped index: $index');
+    setState(() {
+      selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     SizeConfiguration().init(context);
@@ -59,18 +69,24 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 50,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16.0),
-                              border: Border.all(
-                                color: Colors.white,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pop(
+                                  context); // This will navigate back to the previous screen
+                            },
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(16.0),
+                                border: Border.all(
+                                  color: Colors.white,
+                                ),
                               ),
+                              padding: const EdgeInsets.all(12),
+                              child: SvgPicture.asset(
+                                  'assets/arrow_back_icon.svg'),
                             ),
-                            padding: const EdgeInsets.all(12),
-                            child:
-                                SvgPicture.asset('assets/arrow_back_icon.svg'),
                           ),
                           Container(
                             height: 50,
@@ -166,10 +182,14 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
               ),
             ),
             SizedBox(
-              height: SizeConfiguration.blockSizeHorizontal! * 5,
+              height: SizeConfiguration.blockSizeVertical! * 5,
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: CustomBottomNavigationBar(
+        selectedIndex: selectedIndex,
+        onItemTapped: onItemTapped,
       ),
     );
   }
