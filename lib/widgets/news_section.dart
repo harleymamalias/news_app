@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app/models/author_data.dart';
 import 'package:news_app/models/news_details_data.dart';
 import 'package:news_app/screens/author_details_screen.dart';
 import 'package:news_app/screens/news_details_screen.dart';
@@ -20,7 +21,9 @@ class NewsSection extends StatelessWidget {
         itemCount: newsDataList.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          NewsDetailsData item = newsDataList[index];
+          NewsDetailsData newsItem = newsDataList[index];
+          NewsAuthorDetails authorDetails = authorData[index];
+
           return Container(
             margin: const EdgeInsets.only(right: 20),
             padding: const EdgeInsets.all(12),
@@ -55,7 +58,7 @@ class NewsSection extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(item.mainCoverPhoto),
+                        image: AssetImage(newsItem.mainCoverPhoto),
                       ),
                     ),
                   ),
@@ -65,7 +68,7 @@ class NewsSection extends StatelessWidget {
                 ),
                 Flexible(
                   child: Text(
-                    item.headlineTitle,
+                    newsItem.headlineTitle,
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                         color: const Color(0xFF19202D),
@@ -85,7 +88,10 @@ class NewsSection extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const AuthorDetailsScreen(),
+                        builder: (context) => AuthorDetailsScreen(
+                          authorDetails: authorData[index],
+                          index: index,
+                        ),
                       ),
                     );
                   },
@@ -97,7 +103,7 @@ class NewsSection extends StatelessWidget {
                           CircleAvatar(
                             radius: 19,
                             backgroundColor: Colors.lightBlueAccent,
-                            backgroundImage: AssetImage(item.authorProfile),
+                            backgroundImage: AssetImage(newsItem.authorProfile),
                           ),
                           const SizedBox(
                             width: 12,
@@ -107,7 +113,7 @@ class NewsSection extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                '${item.authorFirstName} ${item.authorLastName}',
+                                '${newsItem.authorFirstName} ${newsItem.authorLastName}',
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     color: const Color(0xFF19202D),
@@ -123,7 +129,7 @@ class NewsSection extends StatelessWidget {
                                 height: 5,
                               ),
                               Text(
-                                item.datePublished,
+                                newsItem.datePublished,
                                 style: GoogleFonts.roboto(
                                   textStyle: TextStyle(
                                     color: const Color(0xFF9397A0),

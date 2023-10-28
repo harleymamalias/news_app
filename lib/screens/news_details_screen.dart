@@ -92,8 +92,9 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                 ],
               ),
             ),
-            Padding(
+            Container(
               padding: const EdgeInsets.symmetric(horizontal: 40),
+              transform: Matrix4.translationValues(0, -14, 0),
               child: Text(
                 widget.newsDetailsData.newsTitle,
                 style: GoogleFonts.poppins(
@@ -107,7 +108,12 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
               ),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+              margin: const EdgeInsets.symmetric(
+                horizontal: 40,
+                vertical: 16,
+              ),
+              padding: EdgeInsets.symmetric(
+                  horizontal: SizeConfiguration.blockSizeHorizontal! * 2.5),
               height: 54,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -118,13 +124,14 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
               ),
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
                   CircleAvatar(
                     radius: 13,
                     backgroundColor: Colors.blue,
-                    backgroundImage: AssetImage(widget.newsDetailsData.authorProfile),
+                    backgroundImage:
+                        AssetImage(widget.newsDetailsData.authorProfile),
                   ),
                   SizedBox(
                     width: SizeConfiguration.blockSizeHorizontal! * 2.5,
@@ -153,7 +160,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                 widget.newsDetailsData.description,
                 style: GoogleFonts.poppins(
                   textStyle: TextStyle(
-                    color: Color(0xFF19202D),
+                    color: const Color(0xFF19202D),
                     fontSize: SizeConfiguration.blockSizeHorizontal! * 4,
                     fontWeight: FontWeight.w500,
                     height: 0,

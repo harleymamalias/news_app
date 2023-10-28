@@ -13,7 +13,7 @@ class FullScreenSlider extends StatefulWidget {
 }
 
 class _FullScreenSliderState extends State<FullScreenSlider> {
-  int current_index = 1;
+  int currentIndex = 0;
   final CarouselController _controller = CarouselController();
   @override
   Widget build(BuildContext context) {
@@ -29,11 +29,11 @@ class _FullScreenSliderState extends State<FullScreenSlider> {
             onPageChanged: (index, reason) {
               setState(
                 () {
-                  current_index = index;
+                  currentIndex = index;
                 },
               );
             },
-            initialPage: current_index,
+            initialPage: currentIndex,
           ),
           items: carouselItems.map(
             (item) {
@@ -64,7 +64,7 @@ class _FullScreenSliderState extends State<FullScreenSlider> {
                         padding: const EdgeInsets.symmetric(
                           horizontal: 6,
                         ),
-                        child: SvgPicture.asset(current_index == entry.key
+                        child: SvgPicture.asset(currentIndex == entry.key
                             ? 'assets/carousel_indicator_enabled.svg'
                             : 'assets/carousel_indicator_disabled.svg'),
                       ),

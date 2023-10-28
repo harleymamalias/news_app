@@ -32,7 +32,7 @@ class NewsAuthorDetails {
   });
 }
 
-List<NewsAuthorDetails> newsAuthorItems = [
+List<NewsAuthorDetails> authorData = [
   NewsAuthorDetails(
     authorProfile: 'assets/Tywin-Lannister.jpg',
     authorFirstName: 'Tywin',
