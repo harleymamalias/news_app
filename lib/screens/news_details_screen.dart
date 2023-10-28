@@ -124,9 +124,6 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
               ),
               child: Row(
                 children: [
-                  const SizedBox(
-                    width: 12,
-                  ),
                   CircleAvatar(
                     radius: 13,
                     backgroundColor: Colors.blue,
@@ -134,7 +131,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                         AssetImage(widget.newsDetailsData.authorProfile),
                   ),
                   SizedBox(
-                    width: SizeConfiguration.blockSizeHorizontal! * 2.5,
+                    width: SizeConfiguration.blockSizeHorizontal! * 1.5,
                   ),
                   Text(
                     '${widget.newsDetailsData.authorFirstName} ${widget.newsDetailsData.authorLastName}  ${widget.newsDetailsData.datePublished}  •  ${widget.newsDetailsData.minutesPosted}',
@@ -146,7 +143,7 @@ class _NewsDetailsScreenState extends State<NewsDetailsScreen> {
                         height: 0,
                       ),
                     ),
-                    maxLines: 1,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],

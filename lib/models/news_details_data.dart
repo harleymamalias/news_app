@@ -58,7 +58,7 @@ List<NewsDetailsData> newsDataList = [
     authorLastName: authorData[1].authorLastName,
     datePublished: 'Oct 25, 2023',
     minutesPosted: '7 min read',
-    description: 'This is a sample news description for the second news item.',
+    description: 'Prepare to embark on an awe-inspiring and truly breathtaking journey of discovery as you set your sights on unraveling the hidden treasures of the Maldives. This enchanting archipelago, nestled in the heart of the Indian Ocean, promises an unparalleled adventure that will ignite your sense of wonder. Imagine yourself standing on the edge of white sandy beaches, gazing out at the endless horizon where the sky meets the ocean in perfect harmony. \n \nDive into the crystal-clear, turquoise waters that envelope you, offering a warm and welcoming embrace. As you descend beneath the surface, you\'ll discover a mesmerizing underwater world filled with vibrant coral reefs that are nothing short of a living masterpiece. These reefs are a haven for marine life, and you\'ll have the privilege of encountering a stunning array of creatures, from the graceful sea turtles to the colorful schools of fish that dance around the corals.',
   ),
   NewsDetailsData(
     mainCoverPhoto: 'assets/sports-event.jpg',
@@ -74,7 +74,7 @@ List<NewsDetailsData> newsDataList = [
     authorLastName: authorData[0].authorLastName,
     datePublished: 'Oct 26, 2023',
     minutesPosted: '7 min read',
-    description: 'This is a sample news description for the first news item.',
+    description: 'Prepare to embark on an awe-inspiring and truly breathtaking journey of discovery as you set your sights on unraveling the hidden treasures of the Maldives. This enchanting archipelago, nestled in the heart of the Indian Ocean, promises an unparalleled adventure that will ignite your sense of wonder. Imagine yourself standing on the edge of white sandy beaches, gazing out at the endless horizon where the sky meets the ocean in perfect harmony. \n \nDive into the crystal-clear, turquoise waters that envelope you, offering a warm and welcoming embrace. As you descend beneath the surface, you\'ll discover a mesmerizing underwater world filled with vibrant coral reefs that are nothing short of a living masterpiece. These reefs are a haven for marine life, and you\'ll have the privilege of encountering a stunning array of creatures, from the graceful sea turtles to the colorful schools of fish that dance around the corals.',
   ),
   NewsDetailsData(
     mainCoverPhoto: 'assets/music-event.jpg',
@@ -90,6 +90,6 @@ List<NewsDetailsData> newsDataList = [
     authorLastName: authorData[1].authorLastName,
     datePublished: 'Oct 25, 2023',
     minutesPosted: '7 min read',
-    description: 'This is a sample news description for the second news item.',
+    description: 'Prepare to embark on an awe-inspiring and truly breathtaking journey of discovery as you set your sights on unraveling the hidden treasures of the Maldives. This enchanting archipelago, nestled in the heart of the Indian Ocean, promises an unparalleled adventure that will ignite your sense of wonder. Imagine yourself standing on the edge of white sandy beaches, gazing out at the endless horizon where the sky meets the ocean in perfect harmony. \n \nDive into the crystal-clear, turquoise waters that envelope you, offering a warm and welcoming embrace. As you descend beneath the surface, you\'ll discover a mesmerizing underwater world filled with vibrant coral reefs that are nothing short of a living masterpiece. These reefs are a haven for marine life, and you\'ll have the privilege of encountering a stunning array of creatures, from the graceful sea turtles to the colorful schools of fish that dance around the corals.',
   ),
 ];
