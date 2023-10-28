@@ -14,14 +14,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int selectedIndex = 0;
+    int selectedIndex = 0;
 
-  void onItemTapped(int index) {
-    // print('Tapped index: $index');
-    setState(() {
-      selectedIndex = index;
-    });
-  }
+    void onItemTapped(int index) {
+      // print('Tapped index: $index');
+      setState(() {
+        selectedIndex = index;
+      });
+    }
          
   @override
   Widget build(BuildContext context) {

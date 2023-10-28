@@ -18,7 +18,7 @@ class UserAvatarDetails extends StatelessWidget {
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
               color: const Color(0xFF19202D),
-              fontSize: SizeConfiguration.blockSizeHorizontal! * 4,
+              fontSize: SizeConfiguration.blockSizeHorizontal! * 5,
               fontWeight: FontWeight.w700,
               height: 0,
             ),
@@ -31,8 +31,8 @@ class UserAvatarDetails extends StatelessWidget {
           'Friday, 27 October',
           style: GoogleFonts.roboto(
             textStyle: TextStyle(
-              color: const Color(0xFF19202D),
-              fontSize: SizeConfiguration.blockSizeHorizontal! * 3,
+              color: const Color(0xFF9397A0),
+              fontSize: SizeConfiguration.blockSizeHorizontal! * 3.5,
               fontWeight: FontWeight.w400,
               height: 0,
             ),

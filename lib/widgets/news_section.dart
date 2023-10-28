@@ -72,7 +72,7 @@ class NewsSection extends StatelessWidget {
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(
                         color: const Color(0xFF19202D),
-                        fontSize: SizeConfiguration.blockSizeHorizontal! * 3.8,
+                        fontSize: SizeConfiguration.blockSizeHorizontal! * 4,
                         fontWeight: FontWeight.w800,
                         height: 0,
                       ),
